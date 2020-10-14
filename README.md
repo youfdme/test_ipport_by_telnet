@@ -1,10 +1,15 @@
 # test_ipport_by_telnet
 用于测试指定ip 端口的通畅情况
-从当前目录读取 host.txt  中的ip和port信息
-host.txt对应格式例如：
-127.0.0.1:80
+使用方式 ：
+在保证有telnet.sh 有执行权限的情况下 
 
-依次读取host.txt的每一行
+sh telnet.sh XXX.txt
+
+#xxx.txt 为保存有IP和port信息的文档
+格式例如：
+192.168.1.1:80
+
+依次读取XXX.txt的每一行
 提取出ip和port 
 通过telnet测试端口
 当端口开放的时候 telnet $ip $port 默认情况下 
