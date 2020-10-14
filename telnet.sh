@@ -6,9 +6,9 @@ do
  sleep 0.5
  check=`echo quit | timeout --signal=9 2 telnet $ip $port 2>/dev/null | grep Escape | wc -l`
  if [ $check -eq 1 ];then
-	echo "$ip $port is OK."
+        echo "$ip $port is OK."
  else
-	echo "$ip $port is faile ...."
+        echo -e "\033[31m$ip $port is FAILE ....\033[0m"
  fi
 
 done
